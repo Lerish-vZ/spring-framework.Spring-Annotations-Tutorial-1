@@ -1,2 +1,4 @@
-package net.springannotations.service;public interface Pizza {
+package net.springannotations.service;
+
+public interface Pizza {
 }
