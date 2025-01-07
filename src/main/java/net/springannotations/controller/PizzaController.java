@@ -10,11 +10,17 @@ import org.springframework.stereotype.Component;
 public class PizzaController {
     private VegPizza vegPizza;
 
-    @Autowired
-    //tells spring container to automatically inject the vegPizza (above) with a bean using the constructor below
-    public PizzaController(VegPizza vegPizza){
+//    @Autowired
+//    //tells spring container to automatically inject the vegPizza (above) with a bean using the constructor below
+//    public PizzaController(VegPizza vegPizza){
+//        this.vegPizza = vegPizza;
+//    }
+
+    @Autowired //tells spring container to inject this spring bean as a dependency with the bottom setter method
+    public void setVegPizza(VegPizza vegPizza) {
         this.vegPizza = vegPizza;
     }
+
     public String getPizza(){
         return vegPizza.getPizza();
     }
