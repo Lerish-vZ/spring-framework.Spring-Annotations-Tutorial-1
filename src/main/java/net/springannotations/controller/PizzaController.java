@@ -15,10 +15,11 @@ public class PizzaController {
 
     private Pizza pizza;
 
-        @Autowired
-    public PizzaController(Pizza pizza){
-        this.pizza = pizza;
-    }
+//    @Autowired
+//    public PizzaController(Pizza pizza){
+//        this.pizza = pizza;
+//    }
+    //@Primary annotation
 
 //    @Autowired
 //    public PizzaController(@Qualifier("vegPizza") Pizza pizza){
