@@ -1,4 +1,9 @@
 package net.springannotations.config;
 
-public class AppConfig {
+import org.springframework.context.annotation.Configuration;
+
+@Configuration //makes this class a configuration class
+public class AppConfig { //within this configuration class we can define Spring bean definitions
+
+
 }
