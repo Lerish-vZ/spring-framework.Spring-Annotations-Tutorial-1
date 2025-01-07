@@ -14,7 +14,7 @@ public class SpringAnnotationsApplication {
 //       PizzaController pizzaController = (PizzaController) context.getBean("pizzaController");
 //        System.out.println(pizzaController.getPizza());
 
-        VegPizza vegPizza = context.getBean(VegPizza.class);
+        VegPizza vegPizza = context.getBean(VegPizza.class); //can specify a bean name but default is the method name
         System.out.println(vegPizza.getPizza());
     }
 

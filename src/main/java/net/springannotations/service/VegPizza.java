@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 //@Component
 
 
-@Primary
+//@Primary
 public class VegPizza implements Pizza{
 
     @Override
