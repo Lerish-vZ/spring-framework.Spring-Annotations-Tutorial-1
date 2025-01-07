@@ -47,5 +47,13 @@ public class PizzaController {
     public String getPizza(){
         return pizza.getPizza();
     }
+
+    private void destroy() {
+        System.out.println("Destruction Logic");
+    }
+
+    private void init() {
+        System.out.println("Initialization Logic");
+    }
 }
  
