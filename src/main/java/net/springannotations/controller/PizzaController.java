@@ -40,6 +40,10 @@ public class PizzaController {
 //    }
     //setter injection
 
+    public PizzaController(Pizza pizza){
+        this.pizza = pizza;
+    }
+
     public String getPizza(){
         return pizza.getPizza();
     }

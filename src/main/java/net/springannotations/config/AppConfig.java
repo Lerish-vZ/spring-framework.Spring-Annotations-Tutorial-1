@@ -1,5 +1,6 @@
 package net.springannotations.config;
 
+import net.springannotations.controller.PizzaController;
 import net.springannotations.service.NonVegPizza;
 import net.springannotations.service.Pizza;
 import net.springannotations.service.VegPizza;
@@ -18,5 +19,10 @@ public class AppConfig { //within this configuration class we can define Spring 
     @Bean
     public Pizza NonVegPizza(){
         return new NonVegPizza();
+    }
+
+    @Bean
+    public PizzaController pizzaController(){
+        return new PizzaController(vegPizza());
     }
 }
