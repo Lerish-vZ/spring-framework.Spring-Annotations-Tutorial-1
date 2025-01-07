@@ -3,6 +3,7 @@ package net.springannotations.controller;
 import net.springannotations.service.Pizza;
 import net.springannotations.service.VegPizza;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component//("pizzaDemo")//"" is the spring name
@@ -14,7 +15,7 @@ public class PizzaController {
 
     private Pizza pizza;
     @Autowired
-    public PizzaController(Pizza pizza){
+    public PizzaController(@Qualifier("vegPizza") Pizza pizza){
         this.pizza = pizza;
     }
 
