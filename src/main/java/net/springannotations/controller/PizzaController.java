@@ -14,11 +14,17 @@ public class PizzaController {
 //    private VegPizza vegPizza;
 
     private Pizza pizza;
-    @Autowired
-    public PizzaController(@Qualifier("vegPizza") Pizza pizza){
+
+        @Autowired
+    public PizzaController(Pizza pizza){
         this.pizza = pizza;
     }
 
+//    @Autowired
+//    public PizzaController(@Qualifier("vegPizza") Pizza pizza){
+//        this.pizza = pizza;
+//    }
+    //@Qualifier annotation
 
 //    @Autowired
 //    //tells spring container to automatically inject the vegPizza (above) with a bean using the constructor below
