@@ -2,7 +2,7 @@ package net.springannotations.service;
 
 import org.springframework.stereotype.Service;
 
-@Service //is specialized annotation of @Component annotation
+@Service //is special addition of @Component annotation
 public class MyService {
 
     public String hello(){
