@@ -12,6 +12,7 @@ public class AppProperties {
     private String name;
     private String description;
     private String uploadDir;
+    private Security security = new Security();
 
     public static class Security{
         private String username;
@@ -74,5 +75,13 @@ public class AppProperties {
 
     public void setUploadDir(String uploadDir) {
         this.uploadDir = uploadDir;
+    }
+
+    public Security getSecurity() {
+        return security;
+    }
+
+    public void setSecurity(Security security) {
+        this.security = security;
     }
 }
