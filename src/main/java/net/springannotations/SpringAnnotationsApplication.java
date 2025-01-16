@@ -1,5 +1,7 @@
 package net.springannotations;
 
+import net.springannotations.configurationproperties.AppProperties;
+import net.springannotations.configurationproperties.AppPropertiesDemo;
 import net.springannotations.controller.MyController;
 import net.springannotations.controller.PizzaController;
 import net.springannotations.lazy.LazyLoader;
@@ -18,20 +20,23 @@ public class SpringAnnotationsApplication {
 //       PizzaController pizzaController = (PizzaController) context.getBean("pizzaController");
 //        System.out.println(pizzaController.getPizza());
 
-      MyController myController = context.getBean(MyController.class);
-      System.out.println(myController.hello());
-
-      MyService myService = context.getBean(MyService.class);
-      System.out.println(myService.hello());
-
-        MyRepository myRepository = context.getBean(MyRepository.class);
-        System.out.println(myRepository.hello());
-
-        LazyLoader lazyLoader = context.getBean(LazyLoader.class);
+//      MyController myController = context.getBean(MyController.class);
+//      System.out.println(myController.hello());
+//
+//      MyService myService = context.getBean(MyService.class);
+//      System.out.println(myService.hello());
+//
+//        MyRepository myRepository = context.getBean(MyRepository.class);
+//        System.out.println(myRepository.hello());
+//
+//        LazyLoader lazyLoader = context.getBean(LazyLoader.class);
 
 
 //        VegPizza vegPizza = context.getBean(VegPizza.class); //can specify a bean name but default is the method name
 //        System.out.println(vegPizza.getPizza());
+
+        AppPropertiesDemo appPropertiesDemo = context.getBean(AppPropertiesDemo.class);
+        appPropertiesDemo.display();
     }  
 
 }
