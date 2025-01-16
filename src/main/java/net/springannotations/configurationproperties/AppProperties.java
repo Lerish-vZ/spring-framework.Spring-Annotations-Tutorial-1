@@ -3,12 +3,22 @@ package net.springannotations.configurationproperties;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @ConfigurationProperties(prefix = "app")
 @Component
 public class AppProperties {
     private String name;
     private String description;
     private String uploadDir;
+
+    public static class Security{
+        private String username;
+        private String password;
+        List<String> roles = new ArrayList<>();
+        private boolean enabled;
+    }
 
     public String getName() {
         return name;
