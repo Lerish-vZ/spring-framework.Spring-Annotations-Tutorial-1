@@ -14,5 +14,10 @@ public class AppPropertiesDemo {
         System.out.println(appProperties.getDescription());
         System.out.println(appProperties.getUploadDir());
 
+        System.out.println(appProperties.getSecurity().getUsername());
+        System.out.println(appProperties.getSecurity().getPassword());
+        System.out.println(appProperties.getSecurity().roles);
+        System.out.println(appProperties.getSecurity().isEnabled());
+
     }
 }
