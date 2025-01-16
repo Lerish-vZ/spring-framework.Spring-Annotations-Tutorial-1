@@ -8,11 +8,11 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller//becomes a Spring MVC Controller
 public class BookController {
 
-    @RequestMapping("/hello-world")
-    @ResponseBody
+    @RequestMapping("/hello-world") //Map incoming http request to this particular method
+    @ResponseBody //return type in Json format
     public String helloWorld(){
         return "Hello World";
-    }
+    } //Handler methods
 
     @RequestMapping("/book")
     @ResponseBody
