@@ -1,5 +1,6 @@
 package net.springannotations.controller;
 
+import net.springannotations.beans.Book;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -11,5 +12,12 @@ public class BookController {
     @ResponseBody
     public String helloWorld(){
         return "Hello World";
+    }
+
+    @RequestMapping("/book")
+    @ResponseBody
+    public Book getBook(){
+        Book book = new Book(1, "Core Java", "LEarn Core Java and Latest Features.");
+        return book;
     }
 }
