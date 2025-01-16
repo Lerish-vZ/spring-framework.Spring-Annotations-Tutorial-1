@@ -17,7 +17,7 @@ public class BookController {
     @RequestMapping("/book")
     @ResponseBody
     public Book getBook(){
-        Book book = new Book(1, "Core Java", "LEarn Core Java and Latest Features.");
+        Book book = new Book(1, "Core Java", "Learn Core Java and Latest Features.");
         return book;
     }
 }
