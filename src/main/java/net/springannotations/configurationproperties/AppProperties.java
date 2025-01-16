@@ -4,7 +4,9 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @ConfigurationProperties(prefix = "app")
 @Component
@@ -19,6 +21,8 @@ public class AppProperties {
         private String password;
         List<String> roles = new ArrayList<>();
         private boolean enabled;
+
+        Map<String,String> permissions = new HashMap<>();
 
         public boolean isEnabled() {
             return enabled;
@@ -50,6 +54,14 @@ public class AppProperties {
 
         public void setUsername(String username) {
             this.username = username;
+        }
+
+        public Map<String, String> getPermissions() {
+            return permissions;
+        }
+
+        public void setPermissions(Map<String, String> permissions) {
+            this.permissions = permissions;
         }
     }
 
