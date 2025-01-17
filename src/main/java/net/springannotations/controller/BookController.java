@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 //@Controller//becomes a Spring MVC Controller
 //@ResponseBody
 @RestController //combination of @Controller & @ResponseBody
+@RequestMapping("/api")// base URI
 public class BookController {
 
     @RequestMapping("/hello-world") //Map incoming http request to this particular method
@@ -16,6 +17,7 @@ public class BookController {
     public String helloWorld(){
         return "Hello World";
     } //Handler methods
+    //Above is how to use @RequestMapping for methods
 
     @RequestMapping("/book")
     //@ResponseBody
