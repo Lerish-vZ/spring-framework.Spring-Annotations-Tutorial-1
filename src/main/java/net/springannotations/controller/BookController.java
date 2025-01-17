@@ -32,8 +32,10 @@ public class BookController {
     }
 
     //@RequestMapping(value = "/book/create", method = RequestMethod.POST)
-    @PostMapping(value = "/book/create")
-    public Book createBook(Book book){
+    @PostMapping(value = "/book/create",
+            consumes = MediaType.APPLICATION_JSON_VALUE
+    )
+    public Book createBook(@RequestBody Book book){ //responsible to retrieve the jSon data from the request body and convert it into the book java object
         System.out.println(book.getId());
         System.out.println(book.getTitle());
         System.out.println(book.getDescription());
