@@ -31,7 +31,8 @@ public class BookController {
         return book;
     }
 
-    @RequestMapping(value = "/book/create", method = RequestMethod.POST)
+    //@RequestMapping(value = "/book/create", method = RequestMethod.POST)
+    @PostMapping(value = "/book/create")
     public Book createBook(Book book){
         System.out.println(book.getId());
         System.out.println(book.getTitle());
