@@ -40,5 +40,5 @@ public class BookController {
         System.out.println(book.getTitle());
         System.out.println(book.getDescription());
         return book;
-    }
+    } //Use postman to post a book in json format
 }
