@@ -30,4 +30,11 @@ public class BookController {
         Book book = new Book(1, "Core Java", "Learn Core Java and Latest Features.");
         return book;
     }
+
+    public Book createBook(Book book){
+        System.out.println(book.getId());
+        System.out.println(book.getTitle());
+        System.out.println(book.getDescription());
+        return book;
+    }
 }
