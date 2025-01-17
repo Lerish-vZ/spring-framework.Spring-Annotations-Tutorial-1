@@ -3,6 +3,7 @@ package net.springannotations.controller;
 import net.springannotations.beans.Book;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
@@ -36,11 +37,11 @@ public class BookController {
     @PostMapping(value = "/book/create",
             consumes = MediaType.APPLICATION_JSON_VALUE
     )
-    @ResponseStatus(value = HttpStatus.CREATED)
-    public Book createBook(@RequestBody Book book){ //responsible to retrieve the jSon data from the request body and convert it into the book java object
+    //@ResponseStatus(value = HttpStatus.CREATED)
+    public ResponseEntity<Book> createBook(@RequestBody Book book){ //responsible to retrieve the jSon data from the request body and convert it into the book java object
         System.out.println(book.getId());
         System.out.println(book.getTitle());
         System.out.println(book.getDescription());
-        return book;
+        return new ResponseEntity<>(book, HttpStatus.CREATED);
     } //Use postman to post a book in json format
 }
