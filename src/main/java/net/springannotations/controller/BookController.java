@@ -20,7 +20,7 @@ public class BookController {
     //Above is how to use @RequestMapping for methods
 
 
-     @GetMapping(value = {"/book"}) 
+     @GetMapping(value = {"/book", "/java"})
 //     // @RequestMapping(value = {"/book", "/core-java", "java"},//multiple URI
 //     method = RequestMethod.GET//, //HTTP Methods
 //            produces = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE}, //Tells Rest API What type it has to return in this case Json
