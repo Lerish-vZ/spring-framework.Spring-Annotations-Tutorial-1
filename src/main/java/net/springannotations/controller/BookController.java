@@ -44,4 +44,11 @@ public class BookController {
         System.out.println(book.getDescription());
         return new ResponseEntity<>(book, HttpStatus.CREATED);
     } //Use postman to post a book in json format
+
+    public ResponseEntity<Book> updateBook(int id, Book updatedBook){
+        System.out.println(id);
+        System.out.println(updatedBook.getTitle());
+        System.out.println(updatedBook.getDescription());
+        
+    }
 }
