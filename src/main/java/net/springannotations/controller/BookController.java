@@ -53,4 +53,9 @@ public class BookController {
         updatedBook.setId(id);
         return ResponseEntity.ok(updatedBook);
     }
+
+    public ResponseEntity<String> deleteBook(int id){
+        System.out.println(id);
+        return ResponseEntity.ok("Book deleted successfully.");
+    }
 }
