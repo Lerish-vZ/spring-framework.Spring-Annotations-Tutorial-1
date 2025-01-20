@@ -45,6 +45,7 @@ public class BookController {
         return new ResponseEntity<>(book, HttpStatus.CREATED);
     } //Use postman to post a book in json format
 
+    @PutMapping(value = "/books/update/{id}")
     public ResponseEntity<Book> updateBook(int id, Book updatedBook){
         System.out.println(id);
         System.out.println(updatedBook.getTitle());
