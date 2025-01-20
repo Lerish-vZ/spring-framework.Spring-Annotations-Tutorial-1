@@ -54,7 +54,8 @@ public class BookController {
         return ResponseEntity.ok(updatedBook);
     }
 
-    public ResponseEntity<String> deleteBook(int id){
+    @DeleteMapping(value = "books/delete/{id}")
+    public ResponseEntity<String> deleteBook(@PathVariable int id){
         System.out.println(id);
         return ResponseEntity.ok("Book deleted successfully.");
     }
