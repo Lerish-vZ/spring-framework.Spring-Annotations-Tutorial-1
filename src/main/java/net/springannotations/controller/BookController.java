@@ -49,6 +49,6 @@ public class BookController {
         System.out.println(id);
         System.out.println(updatedBook.getTitle());
         System.out.println(updatedBook.getDescription());
-        
+        return ResponseEntity.ok(updatedBook);
     }
 }
